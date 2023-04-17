@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" <head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Ciapkowo - Zgubiłem zwierzaka</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="styles.css" rel="stylesheet" />
+
+</head>
+
+<body id="page-top">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+
+            <div class="icon-bar" onclick="Show()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+            <ul id="nav-lists">
+                <li class="close"><span onclick="Hide()">×</span></li>
+                <li><a href="adoptujmain.html">ADOPTUJ PUPILA</a></li>
+                <li><a href="found.html">ZNALAZŁEM ZWIERZAKA</a></li>
+                <li><a href="looking.html">ZGUBIŁEM ZWIERZAKA</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
+            </ul>
+
+            <script>
+                var navList = document.getElementById("nav-lists");
+                function Show() {
+                    navList.classList.add("_Menus-show");
+                }
+
+                function Hide() {
+                    navList.classList.remove("_Menus-show");
+                }
+            </script>
+
+
+        </div>
+    </div>
+    <section class="main" id="services">
+        <div class="oddzial px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="columna1">
+                    <div class="okienko">
+                        <p class="normal" style="font-size: 260%; margin: 0;">ZGŁOSZENIE</p>
+                        <p class="normal">ZGUBIŁEM ZWIERZAKA</p> <br>
+                        <u><p class="normal"><a href="lost.php" style="color:white">ZOBACZ ZAGINIONE ZWIERZĘTA</a></u> </p>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="columna2">
+                    <div class="col-sm-11">
+                        <div class="col" id="formatsuper"> <strong>DANE ZWIERZĘCIA</strong></div> <br>
+                        <p>Gatunek</p>
+                    </div>
+                    <form action="addlost.php" method="post" enctype="multipart/form-data">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select" name="gatunek" required>
+                                    <option selected> </option>
+                                    <option value="pies">Pies</option>
+                                    <option value="kot">Kot</option>
+                                    <option value="inne">Inne zwierzątko</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-11">
+                            <p>Imię</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="imie" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-11">
+                            <p>Płeć</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select" name="plec" required>
+                                    <option selected> </option>
+                                    <option value="samiec">Samiec</option>
+                                    <option value="samica">Samica</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-11">
+                                <p>Wiek</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group">
+                                    <input type="number" name="wiek" class="form-control" min="0" max="20" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Wielkosć</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select" name="rozmiar" required>
+                                    <option selected> </option>
+                                    <option value="mały">Mały</option>
+                                    <option value="średni">Średni</option>
+                                    <option value="duży">Duży</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Kolor</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <select class="form-select" name="color" required>
+                                <option selected></option>
+                                <option value="jasny">jasny</option>
+                                <option value="ciemny">ciemny</option>
+                                <option value="trikolor">trikolor</option>
+                                <option value="podpalany">podpalany</option>
+                                <option value="szary">szary</option>
+                                <option value="czarny">czarny</option>
+                                <option value="brązowy">brązowy</option>
+                                <option value="inny">inny</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Sierść</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <select class="form-select" name="siersc" required>
+                                <option selected></option>
+                                <option value="krótka">krótka</option>
+                                <option value="długa">długa</option>
+                                <option value="szorstka">szorstka</option>
+                                <option value="inna">inna</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Informacje</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <textarea name="description" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Miejsce zgubienia / gdzie może się znajdować</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="miejsce" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-11">
+                            <p>Zdjęcie pupila (pomocne w identyfikacji)</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="file" name="zdjecieUpload" id="zdjecieUpload" class="form-control" accept="image/png, image/jpeg" required>
+                            </div>
+                        </div> <br>
+                        <!--dane kontaktowe-->
+                        <div class="col" id="formatsuper">DANE KONTAKTOWE</div>
+                        <div class="col-sm-11">
+                            <p>Imię i nazwisko szukającego</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="dane" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Numer telefonu</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="phone" class="form-control" required maxlength="9">
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Adres e-mail</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <p>Dodatkowe uwagi (opcjonalnie)</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <input type="text" name="inne" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-3" style="width: 90%;">
+                            <div class="col col-3 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+                                style="padding-top: 8px !important;">
+                                <input type="checkbox" required class="checkbox" name="rodo_confirm">
+                            </div>
+
+                            <div class="col col-9 col-sm-10 col-md-10 col-lg-10 col-xl-10 mt-1">
+                                <p>Zapoznałem/am się i akceptuję <u><a href=klauzula.pdf >klauzulę przetwarzania danych osobowych</a></u> w związku z
+                                    zamieszczeniem ogłoszenia na stronie internetowej Schroniska i wyrażam zgodę na
+                                    opublikowanie ogłoszenia.
+                                </p>
+                            </div>
+                        </div> <br><br> <br><br>
+                        <p style="text-align: center;"><br><br>
+                            <input type="submit" value="Wyślij zgłoszenie" class="btn" style="background-color: #3bd16f;">
+                            <br><br>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer>© Ciapkowo 2022</footer>
+</body>
+
+</html>
+</div>
+</body>
+
+</html>
