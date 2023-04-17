@@ -1,0 +1,12 @@
+administrator zaq1@WSX c380f833034d60bf035a134094eb538d600dc6f9
+usr_1 CiApK0W02O22!1 9ffa1940a61770b0b61836c58aea6f5e5eecb897
+usr_2 dfsan@sdjdjh23##! 87bb605d5bcee59c93c76266bf81f475b7234adc
+
+
+
+
+trzecie to dlugie takie to ma byc w bazie jako haslo bo uzywamy hashowania sha1
+czyli np w bazie
+login - administrator
+haslo - c380f833034d60bf035a134094eb538d600dc6f9
+na strone zalogujesz sie wtedy haslem: zaq1@WSX

@@ -1,0 +1,8 @@
+nazwa bazy danych w connect.php: ciapkowoprojekt
+baza po zaimportowaniu powinna miec tabele found, pracownicy, zaginione i zwierzaki
+
+powinno się zmienić dane logowania do bazy MySQL (nazwane connect.php)
+
+panel logowania:
+login: administrator
+haslo: zaq1@WSX
